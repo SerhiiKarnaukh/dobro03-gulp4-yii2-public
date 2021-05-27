@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+@import "blocks/bootstrap";
+@import "blocks/slick-theme";
+@import "blocks/slick";
+@import "normalize";
+@import "variables";
+@import "fonts";
+@import "mixins";
+@import "core";
+
+
+@import "blocks/jqHidden";
+
+@import "blocks/header";
+@import "blocks/devider";
+@import "blocks/section-wrap";
+@import "blocks/service";
+@import "blocks/advantages";
+@import "blocks/scheme";
+@import "blocks/team";
+@import "blocks/principles";
+@import "blocks/auto";
+@import "blocks/ideas";
+@import "blocks/reviews";
+@import "blocks/price";
+@import "blocks/contact";
+@import "blocks/footer";
+@import "blocks/socials";
+@import "blocks/arrow-up";
+@import "blocks/consultation-form";
+@import "blocks/reviews-form";
+
+

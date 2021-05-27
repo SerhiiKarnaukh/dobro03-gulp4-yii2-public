@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /backend/
+Disallow: /common/
+Disallow: /vendor/
+Disallow: /frontend/
+Sitemap: http://dobro03.otlr.net/sitemap.xml

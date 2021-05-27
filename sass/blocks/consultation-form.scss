@@ -1,0 +1,75 @@
+#popUp {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 25vh;
+  width: 450px;
+  max-width: 90%;
+  max-height: 70vh;
+  margin: 0 auto;
+  padding: 20px;
+  background-color:$white;
+  border: 3px double $black;
+  color: $black;
+  overflow: auto;
+  z-index: 11;
+  transition: all 0.7s ease 0s;
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  .closePopUp {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 14px;
+    opacity: 1;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 23px;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+    margin: 0 0 1em;
+    font-size: 18px;
+  }
+
+  #ajaxWrapper {
+    form {
+      float: left;
+      .form-group {
+        clear:both;
+        text-align:right;
+        line-height:25px;
+        label {
+          float:left;
+          padding-right:10px;
+          font-family: $mainFont;
+        }
+
+      }
+      .btn {
+        background-color: $red-soft;
+        border-color: $red-soft;
+        border-radius: 20px;
+        font-family: $mainFont;
+        &:hover {
+          background-color: darken($red-soft,20%);
+        }
+      }
+
+    }
+
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+}
+

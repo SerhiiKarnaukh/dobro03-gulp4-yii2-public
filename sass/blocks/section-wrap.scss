@@ -1,0 +1,246 @@
+.section-wrap {
+  position: relative;
+  height: 100vh;
+  .section-top {
+    background: url("/files/img/car1.webp") top center no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 95%, 0 85%);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    //parallax
+    overflow: hidden;
+
+    &::after {
+      @include darkImage($dc:rgba(0, 0, 0, 0.7));
+    }
+    .topInfo__wrap {
+      align-self: center;
+      flex-basis: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      .topInfo {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        align-self: flex-end;
+        text-align: right;
+        color: $white;
+        z-index: 2;
+        margin-right: 3vw;
+        &__title {
+          font-size: 55px;
+          line-height: 1.2;
+          font-weight: 700;
+          text-align: right;
+          font-family: $mainFont;
+          margin-bottom: 7vh;
+          //text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+        }
+        &__desc {
+          font-size: 28px;
+          font-weight:500;
+          color: $red-soft;
+          text-align: center;
+          margin-bottom: 7vh;
+
+        }
+        &__svg {
+          fill: $red-soft;
+          width: 25px;
+          height: 25px;
+          margin-bottom: 4px;
+        }
+        &__more {
+          align-self: center;
+          @include btn($fs: 13px);
+          margin-bottom: 10vh;
+        }
+      }
+    }
+  }
+  .section-wrap__icon {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 15%;
+    transition-duration: 800ms;
+    &:hover {
+      bottom: 14%;
+    }
+
+    a {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      z-index: 2;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      transition-duration: 800ms;
+      &:hover {
+        border-color: $red-soft;
+      }
+    }
+    .section-wrap__img {
+      width: 23px;
+      height: 23px;
+      fill: $white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+  }
+}
+
+@media only screen and (max-width: 1680px) {
+  .section-wrap {
+    .section-top {
+      .topInfo__wrap {
+        .topInfo {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 1600px) {
+  .section-wrap {
+    .section-top {
+      .topInfo__wrap {
+        .topInfo {
+          &__title {
+            font-size: 43px;
+          }
+          &__desc {
+            font-size: 19px;
+          }
+          &__svg {
+            width: 15px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 1342px) {
+  .section-wrap {
+    .section-top {
+      .topInfo__wrap {
+        .topInfo {
+          &__title {
+            font-size: 35px;
+          }
+          &__desc {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 1108px) {
+  .section-wrap {
+    .section-top {
+      .topInfo__wrap {
+        .topInfo {
+          &__title {
+            font-size: 27px;
+          }
+          &__desc {
+            font-size: 12px;
+          }
+          &__svg {
+            width: 10px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 822px) {
+  .section-wrap {
+    .section-top {
+      .topInfo__wrap {
+        @include flex-center();
+
+        .topInfo {
+          margin: 0;
+          align-self: center;
+          &__title {
+            text-align: center;
+          }
+          &__desc {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 642px) {
+  .section-wrap {
+    .section-top {
+      .topInfo__wrap {
+        .topInfo {
+          margin-top: 10vh;
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 522px) {
+  .section-wrap {
+    .section-top {
+      .topInfo__wrap {
+        .topInfo {
+          margin-top: 23vh;
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 442px) {
+  .section-wrap {
+    .section-top {
+      .topInfo__wrap {
+        .topInfo {
+          margin-top: 0;
+          &__svg {
+            width: 10px;
+            height: 10px;
+          }
+          &__title {
+            font-size: 20px;
+          }
+
+        }
+      }
+    }
+  }
+
+}
+
+

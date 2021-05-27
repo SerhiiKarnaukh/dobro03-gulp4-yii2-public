@@ -1,0 +1,86 @@
+.price {
+  padding: 140px 0;
+  border-top: 1px solid #d8d9db;
+  .price__devider {
+    @include devider($gray);
+  }
+  .price__title {
+    color: $gray;
+    font-size: 36px;
+    letter-spacing: 3.6px;
+    font-family:$mainFont;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .prices {
+    .price__block {
+      width: 100%;
+      margin-bottom: 2em;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: stretch;
+      align-content: stretch;
+      .priceIconSvg {
+        width: 60px;
+        height: 60px;
+        fill: $red-soft;
+      }
+      .priceBlockContent {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        .priceText {
+          padding: 15px 50px;
+          flex: 1 1 auto;
+          line-height: 30px;
+          font-size: 16px;
+          font-weight: 400;
+          color: $black;
+        }
+        .priceAmount {
+          text-align: right;
+          font-weight: 600;
+          line-height: 30px;
+          font-size: 25px;
+          padding: 15px 0;
+          color: $red-soft;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .price {
+    .prices {
+      .price__block {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .price {
+    padding: 70px 0;
+    .price__title {
+      font-size: 24px;
+    }
+    .prices {
+      .price__block {
+        flex-direction: column;
+        align-items: center;
+        .priceBlockContent {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          .priceText {
+            padding: 10px 15px;
+          }
+        }
+      }
+    }
+  }
+}

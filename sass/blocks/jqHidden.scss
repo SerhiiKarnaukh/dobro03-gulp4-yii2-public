@@ -1,0 +1,14 @@
+.jq_hidden {
+  transition: all 1s ease 0s;
+  -webkit-transition: all 1s ease 0s;
+}
+.jq_hidden.jq_hide {
+  -webkit-transform: translateY(100px);
+  transform: translateY(100px);
+  opacity: 0;
+}
+.jq_hidden.jq_active {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}

@@ -1,0 +1,234 @@
+#logo {
+  width: 200px;
+  height: 100px;
+}
+header {
+  background-color: $white;
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid $gray;
+  .top {
+    position: relative;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    z-index: 3;
+    &__logo--svg {
+      width: 200px;
+      height: 100px;
+    }
+    &__location {
+      color: $black;
+      padding-left: 50px;
+      &--svg {
+        fill: $red;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top:25%;
+        left: 0;
+      }
+      p {
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+    }
+    &__phone {
+      color: $black;
+      a {
+        display: block;
+        color: $gray-dark;
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+      a.top__phone--mail {
+        font-size: 14px;
+        color: $gray;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+    }
+    &__location--title {
+      color:$red-soft;
+      text-transform: uppercase;
+    }
+
+    #consultationForm {
+      .top__callback {
+        @include btn($bg: transparent, $bc: $red-soft, $fs: 13px, $lh: 19px, $ls: 0.14px, $br: 22px, $w: 240px, $clr: $black);
+        padding-left: 50px;
+        cursor: pointer;
+        #consultation {
+          text-decoration: none;
+          color: $black;
+          display: inline-block;
+          transition-duration: 800ms;
+        }
+        .pulseBtn {
+          display: none;
+          z-index: -1000;
+          position: absolute;
+          width: 70px;
+          height: 70px;
+          border: 5px solid #ff0000;
+          border-radius: 50%;
+          animation: pulsarBtn 2s infinite linear;
+          margin-top: 2px;
+          margin-left: -35px;
+        }
+        &:hover {
+          background-color: $red-soft;
+        }
+        &:hover .top__callback--svg, #consultation {
+          fill: $white;
+        }
+        &:hover #consultation {
+          color: $white;
+        }
+        &--svg {
+          fill: $red;
+          width: 18px;
+          height: 18px;
+          position: absolute;
+          top:5%;
+          left: -21%;
+          transition-duration: 800ms;
+        }
+      }
+    }
+
+  }
+}
+@keyframes pulsarBtn {
+  0% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2, 2);
+    opacity: 0;
+  }
+}
+
+@keyframes pulsarBtn {
+  0% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2, 2);
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 1070px) {
+  header {
+   .top {
+     #consultationForm {
+       .top__callback {
+         position: fixed;
+         right: 3%;
+         bottom: 3%;
+         width: 100px;
+         height: 100px;
+         z-index: 20;
+         border: none;
+         transition-duration: unset;
+         &:hover {
+           background-color: transparent;
+         }
+         &--svg {
+           fill: $white;
+           width: 10px;
+           height: 10px;
+           top:33%;
+           left: 10%;
+         }
+         .pulseBtn {
+           display: block;
+         }
+         #consultation {
+           font-size: 11px;
+           position: absolute;
+           left: 0;
+           top: 0;
+           width: 100%;
+           height: 100%;
+           padding: 30px 5px;
+           border-radius: 50%;
+           background-color: $red;
+           color: $white;
+         }
+       }
+     }
+   }
+
+  }
+  .arrow-up {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  header {
+    .top {
+      padding: 0;
+      &__logo {
+        #logo {
+          width: 170px;
+        }
+
+      }
+      &__location {
+        p {
+          font-size: 12px;
+        }
+      }
+      &__phone {
+        a {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 642px) {
+  header {
+    .top {
+
+      &__location {
+        flex-basis: 50%;
+      }
+
+    }
+  }
+
+}
+
+@media only screen and (max-width: 448px) {
+  header {
+    .top {
+
+      &__location {
+       display: none;
+        margin: 0;
+      }
+
+    }
+  }
+
+}
