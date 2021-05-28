@@ -20,6 +20,9 @@ Pass: `admin`
 
 ## Frontend
 
+### NPM Version:
+`>=10.13.0`
+
 ### Project Build Commands:
 - `npm i` - Install NPM Modules
 - `npm start` - Watch Project

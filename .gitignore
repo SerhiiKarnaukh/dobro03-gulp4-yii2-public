@@ -45,9 +45,6 @@ phpunit.phar
 /extensions
 /packages
 
-assets/*
-admin/assets/*
-
 # NPM packages
 /node_modules
 .env
@@ -55,13 +52,8 @@ package-lock.json
 
 # build files
 /js/all.min.js
-*.js.map
+/js/all.min.js.map
 .sass-cache/
 /css/style.min.css
-*.css.map
-*.sass.map
-*.scss.map
+/css/style.min.css.map
 /files/img
-
-frontend/runtime/
-backend/runtime/
